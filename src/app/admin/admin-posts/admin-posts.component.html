@@ -1,0 +1,23 @@
+<div class="container">
+    <br>
+    <h1>All Blog Post</h1>
+    <button class="btn btn-outline-primary" [routerLink]="['']">HomePage</button>
+    <button class="btn btn-outline-primary " style="margin: 3px;" [routerLink]="['/admin/posts/add']">Add Post</button>
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th> </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let post of posts">
+                <td>{{post.title}}</td>
+                <td><button class="btn btn-primary" [routerLink]="['/admin/posts', post.id]">View</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

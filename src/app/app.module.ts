@@ -1,16 +1,30 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import{HttpClientModule} from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AdminPostsComponent } from './admin/admin-posts/admin-posts.component';
+import { AdminViewPostComponent } from './admin/admin-view-post/admin-view-post.component';
+import { FormsModule } from '@angular/forms';
+import { AdminAddPostComponent } from './admin/admin-add-post/admin-add-post.component';
+import { PostsComponent } from './admin/posts/posts.component';
+import { PostComponent } from './admin/post/post.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AdminPostsComponent,
+    AdminViewPostComponent,
+    AdminAddPostComponent,
+    PostsComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
